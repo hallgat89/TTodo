@@ -12,7 +12,7 @@ todo #lists your tasks
 
 todo Something I definitely Should do #adds a TODO note, and shows all your tasks
 
-did 2 #removes the task from todo, shows the remaining tasks
+did 2 #removes the second task from TODO, shows the remaining tasks
 
 # How to use
 
