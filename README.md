@@ -6,11 +6,13 @@ It is so minimal, it even deletes the todo.txt when it is empty. (comment that l
 
 # Usage
 
->todo #lists your tasks
+In your terminal:
 
->todo Something I definitely Should do #adds a TODO note, and shows all your tasks
+todo #lists your tasks
 
->did 2 #removes the task from todo, shows the remaining tasks
+todo Something I definitely Should do #adds a TODO note, and shows all your tasks
+
+did 2 #removes the task from todo, shows the remaining tasks
 
 # How to use
 
