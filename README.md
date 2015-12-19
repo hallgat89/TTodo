@@ -14,7 +14,7 @@ todo Something I definitely Should do #adds a TODO note, and shows all your task
 
 did 2 #removes the second task from TODO, shows the remaining tasks
 
-# How to use
+# How to set up
 
 1. Copy the todo.sh script somewhere
 2. Change the todo.txt and todotemp.txt locations in the script if needed
