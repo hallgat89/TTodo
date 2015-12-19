@@ -18,7 +18,7 @@ did 2 #removes the second task from TODO, shows the remaining tasks
 
 1. Copy the todo.sh script somewhere
 2. Change the todo.txt and todotemp.txt locations in the script if needed
-3. chmod +x todo.sh #add execution permissio to the file
+3. chmod +x todo.sh #add execution permission to the file
 4. Add two necessary aliases at the end of your .bashrc:
   alias todo="~/todo.sh"
   alias did="~/todo.sh -d"
