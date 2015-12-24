@@ -13,8 +13,11 @@ if [ "$#" -gt "0" ]
 then
     if [ "$#" -eq "2" -a "$1" = "-d" ]
     then
-	    # Exclude line
-	    awk "!(NR==$2)" $todofile > $todotemp && mv $todotemp $todofile
+        if [ -f $todofile ]
+        then
+            # Exclude line
+            awk "!(NR==$2)" $todofile > $todotemp && mv $todotemp $todofile
+        fi
     else
 	    echo $@ >> ~/todo.txt
     fi
