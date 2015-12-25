@@ -18,6 +18,9 @@ then
             # Exclude line
             awk "!(NR==$2)" $todofile > $todotemp && mv $todotemp $todofile
         fi
+    elif [ "$#" -eq "1" -a "$1" = "-d" ]
+    then
+        echo "No TODO number specified!"
     else
 	    echo $@ >> ~/todo.txt
     fi
