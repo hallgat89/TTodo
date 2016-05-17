@@ -6,7 +6,7 @@
 #alias did="~/todo.sh -d"
 
 
-todofile="todo.txt"
+todofile="$HOME/todo.txt"
 todotemp="/tmp/todotemp.txt"
 
 if [ "$#" -gt "0" ]
