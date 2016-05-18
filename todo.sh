@@ -22,7 +22,7 @@ then
     then
         echo "No TODO number specified!"
     else
-	    echo $@ >> ~/todo.txt
+	    echo "$@" >> ~/todo.txt
     fi
 fi
 
