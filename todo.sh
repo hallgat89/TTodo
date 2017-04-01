@@ -2,9 +2,9 @@
 
 # Minimal todo script by Adam Hallgat (https://github.com/hallgat89/)
 # Put the following two lines into the bashrc(change the locations if needed)
-#alias todo="~/todo.sh"
-#alias did="~/todo.sh -d"
-
+#alias todo="~/.scripts/todo.sh"
+#alias did="~/.scripts/todo.sh -d"
+# quick info for terminal: todo -c
 
 todofile="$HOME/todo.txt"
 todotemp="/tmp/todotemp.txt"
@@ -21,12 +21,22 @@ then
     elif [ "$#" -eq "1" -a "$1" = "-d" ]
     then
         echo "No TODO number specified!"
+    elif [ "$#" -eq "1" -a "$1" = "-c" ]
+    then
+	    if [ -f $todofile ]
+	    then
+		echo "There are `cat $todofile | wc -l` things to do."
+		exit 0
+	    else
+		echo "Nothing in TODO"
+		exit 0
+	    fi
     else
-	    echo "$@" >> ~/todo.txt
+	    echo "$@" >> $todofile
     fi
 fi
 
-if [ -f $todofile ]
+if [ -f "$todofile" ]
 then
     todolines=`cat $todofile | wc -l`
     if [ "$todolines" -eq 0 ]
@@ -35,7 +45,7 @@ then
         echo "Nothing in TODO"
     else
         echo "TODO:"
-        cat -n $todofile
+        cat -n "$todofile"
     fi
 else
 	echo "Nothing in TODO"
