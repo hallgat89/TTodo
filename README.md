@@ -20,6 +20,8 @@ In your terminal:
 4. Add two necessary aliases at the end of your .bashrc: <br />
   <code>alias todo="~/todo.sh"</code><br />
   <code>alias did="~/todo.sh -d"</code><br />
+5. You can get a quick info by running
+  <code>"~/todo.sh -c"</code><br />
 
 
 You are set!
